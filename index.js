@@ -4,6 +4,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser'
 import { connectDB } from './config/db.js';
 import userRoute from './routes/userRouter.js';
+import productRouter from './routes/productRouter.js';
 
 
 dotenv.config();
@@ -16,7 +17,8 @@ app.use(cors({
 app.use(express.json({ limit: '50mb' }));
 app.use(cookieParser())
 
-app.use('/api/user',userRoute)
+app.use('/api/user',userRoute);
+app.use('/api/products',productRouter);
 
 const PORT = 8080 || process.env.PORT
   
