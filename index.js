@@ -20,10 +20,14 @@ app.use(cookieParser())
 app.use('/api/user',userRoute);
 app.use('/api/products',productRouter);
 
-const PORT = 8080 || process.env.PORT
-  
-connectDB().then(()=>{
-    app.listen(PORT, ()=>{
-        console.log(`Server is running on port ${PORT}`);
-    });
+const PORT = 8080 || process.env.PORT;
+
+app.get('/',(req, res) => {
+    res.send('Server is running')
 })
+  
+app.listen(PORT, ()=>{
+    connectDB()
+    console.log(`Server is running on port ${PORT}`);
+});
+
