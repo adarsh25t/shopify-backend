@@ -20,7 +20,7 @@ app.use(cookieParser())
 app.use('/api/user',userRoute);
 app.use('/api/products',productRouter);
 
-const PORT = 8080 || process.env.PORT;
+const PORT = process.env.PORT || 8080;
   
 app.listen(PORT, ()=>{
     connectDB()
