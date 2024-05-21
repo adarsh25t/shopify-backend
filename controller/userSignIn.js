@@ -37,7 +37,7 @@ const userSignIn = async (req, res) => {
             email:user.email
         }
 
-        const token = await jwt.sign({
+        const token = jwt.sign({
             data: tokendata
           }, process.env.TOEKN_SECRET, { expiresIn: 60 * 60 });
 
