@@ -1,4 +1,4 @@
-import Cart from "../models/Cart.js";
+const Cart = require('../models/Cart.js');
 
 
 // get user cart items
@@ -22,6 +22,4 @@ async function getCartItems(req, res) {
     }
 }
 
-export {
-    getCartItems
-}
+module.exports = getCartItems;

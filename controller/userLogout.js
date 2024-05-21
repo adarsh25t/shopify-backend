@@ -15,6 +15,4 @@ async function userlogout(req, res) {
     }
 }
 
-export {
-    userlogout
-}
+module.exports = userlogout

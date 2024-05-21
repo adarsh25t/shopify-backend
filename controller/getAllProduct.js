@@ -1,4 +1,4 @@
-import Product from "../models/productModel.js";
+const Product = require('../models/productModel.js');
 
 
 // get app product
@@ -20,6 +20,6 @@ const getAllProducts = async (req,res) => {
         })
     }
 }
-export {
-    getAllProducts
-}
+
+
+module.exports = getAllProducts

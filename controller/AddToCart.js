@@ -1,4 +1,4 @@
-import Cart from "../models/Cart.js";
+const Cart = require('../models/Cart.js');
 
 
 // add to cart
@@ -37,6 +37,4 @@ const addToCart = async (req,res) => {
     }
 }
 
-export {
-    addToCart
-}
+module.exports = addToCart

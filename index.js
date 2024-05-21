@@ -1,10 +1,10 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import cors from 'cors';
-import cookieParser from 'cookie-parser'
-import { connectDB } from './config/db.js';
-import userRoute from './routes/userRouter.js';
-import productRouter from './routes/productRouter.js';
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
+const connectDB = require('./config/db.js');
+const userRoute = require('./routes/userRouter.js');
+const productRouter = require('./routes/productRouter.js');
 
 
 dotenv.config();
@@ -29,6 +29,3 @@ app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
 });
 
-export {
-    app
-}

@@ -1,4 +1,4 @@
-import Product from "../models/productModel.js";
+const Product = require('../models/productModel.js');
 
 
 // delete product items
@@ -20,6 +20,4 @@ const deleteProduct = async (req,res) => {
     }
 }
 
-export {
-    deleteProduct
-}
+module.exports = deleteProduct

@@ -1,4 +1,4 @@
-import User from "../models/userModel.js";
+const User = require('../models/userModel.js');
 
 
 // get all user accounts
@@ -21,6 +21,4 @@ const AllUsers = async (req,res) => {
     }
 }
 
-export {
-    AllUsers
-}
+module.exports = AllUsers

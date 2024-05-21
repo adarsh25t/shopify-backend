@@ -1,5 +1,5 @@
-import validator from "validator";
-import User from "../models/userModel.js";
+const validator = require('validator');
+const User = require('../models/userModel.js');
 
 
 // update user Details
@@ -41,6 +41,4 @@ const updateUserDetails = async (req, res) => {
     }
 }
 
-export {
-    updateUserDetails
-}
+module.exports = updateUserDetails

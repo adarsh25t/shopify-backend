@@ -1,8 +1,7 @@
 
 
 // increment and decrement the cart quantity
-
-import Cart from "../models/Cart.js";
+const Cart = require('../models/Cart.js');
 
 const incrementItemQuantity = async (req, res) => {
 
@@ -87,7 +86,7 @@ const deleteItem = async (req, res) => {
     }
 }
 
-export {
+module.exports = {
     incrementItemQuantity,
     decrementItemQuantity,
     deleteItem

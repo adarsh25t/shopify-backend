@@ -1,5 +1,5 @@
-import { isAdmin } from "../middleware.js/isAdmin.js";
-import Product from "../models/productModel.js";
+const isAdmin = require('../middleware.js/isAdmin.js');
+const Product = require('../models/productModel.js');
 
 
 // create a new product
@@ -39,6 +39,5 @@ const createNewProduct = async (req, res) => {
     }
 }
 
-export {
-    createNewProduct
-}
+    
+module.exports = createNewProduct

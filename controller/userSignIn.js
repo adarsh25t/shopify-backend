@@ -1,7 +1,7 @@
-import validator from "validator"
-import User from "../models/userModel.js";
-import bcrypt from 'bcrypt'
-import jwt from "jsonwebtoken";
+const validator = require('validator');
+const User = require('../models/userModel.js');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 // Create user login
 const userSignIn = async (req, res) => {
@@ -61,6 +61,4 @@ const userSignIn = async (req, res) => {
     }
 }
 
-export {
-    userSignIn
-}
+module.exports = userSignIn

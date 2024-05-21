@@ -1,14 +1,17 @@
-import express from 'express';
-import { userSignUp } from '../controller/userSignUp.js';
-import { userSignIn } from '../controller/userSignIn.js';
-import { getUserDetails } from '../controller/userDetails.js';
-import { authToken } from '../middleware.js/authToken.js';
-import { userlogout } from '../controller/userLogout.js';
-import { AllUsers } from '../controller/getAllUsers.js';
-import { updateUserDetails } from '../controller/updateUser.js';
-import { addToCart } from '../controller/AddToCart.js';
-import { getCartItems } from '../controller/getCartItems.js';
-import { decrementItemQuantity, deleteItem, incrementItemQuantity } from '../controller/updateCart.js';
+const express = require('express')
+// Importing controllers and middleware using require
+const userSignUp = require('../controller/userSignUp');
+const userSignIn = require('../controller/userSignIn');
+const getUserDetails = require('../controller/userDetails');
+
+const userLogout = require('../controller/userLogout');
+const AllUsers = require('../controller/getAllUsers');
+const updateUserDetails = require('../controller/updateUser');
+const addToCart = require('../controller/AddToCart');
+const getCartItems = require('../controller/getCartItems');
+const { decrementItemQuantity, deleteItem, incrementItemQuantity } = require('../controller/updateCart');
+const authToken = require('../middleware.js/authToken');
+const userlogout = require('../controller/userLogout');
 
 const userRoute = express.Router();
 
@@ -23,4 +26,5 @@ userRoute.get('/usercarts',authToken,getCartItems);
 userRoute.post('/incrementcartitem',authToken,incrementItemQuantity);
 userRoute.post('/decrementcartitem',authToken,decrementItemQuantity);
 userRoute.post('/deletecart',authToken,deleteItem)
-export default userRoute; 
+
+module.exports = userRoute; 

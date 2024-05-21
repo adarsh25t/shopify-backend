@@ -1,11 +1,11 @@
-import express from 'express';
-import { authToken } from '../middleware.js/authToken.js';
-import { createNewProduct } from '../controller/createProduct.js';
-import { getAllProducts } from '../controller/getAllProduct.js';
-import { editProduct } from '../controller/editProductDetails.js';
-import { deleteProduct } from '../controller/deleteProduct.js';
-import { getCategoryProduct } from '../controller/getCategoryProduct.js';
-import { getProductDetails } from '../controller/getProductDetails.js';
+const express = require('express')
+const authToken = require('../middleware.js/authToken');
+const createNewProduct = require('../controller/createProduct.js');
+const getAllProducts = require('../controller/getAllProduct.js');
+const editProduct = require('../controller/editProductDetails.js');
+const deleteProduct = require('../controller/deleteProduct.js');
+const getCategoryProduct = require('../controller/getCategoryProduct.js');
+const getProductDetails = require('../controller/getProductDetails.js');
 
 const productRouter = express.Router();
 
@@ -16,5 +16,4 @@ productRouter.post('/delete',authToken ,deleteProduct);
 productRouter.post('/categoryproducts',getCategoryProduct);
 productRouter.get('/productdetails/:productid',getProductDetails);
 
-
-export default productRouter;
+module.exports = productRouter

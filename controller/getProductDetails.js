@@ -1,4 +1,4 @@
-import Product from "../models/productModel.js";
+const Product = require('../models/productModel.js');
 
 
 // get product details
@@ -22,6 +22,4 @@ const getProductDetails = async (req,res) => {
     }
 }
 
-export {
-    getProductDetails
-}
+module.exports = getProductDetails

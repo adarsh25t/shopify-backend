@@ -2,9 +2,9 @@
 
 // user type check admin
 
-import User from "../models/userModel.js";
+const User = require('../models/userModel.js');
 
-export async function isAdmin(userid) {
+async function isAdmin(userid) {
 
     if (!userid) {
         return false;
@@ -16,3 +16,5 @@ export async function isAdmin(userid) {
     }
     return false;
 }
+
+module.exports = isAdmin;

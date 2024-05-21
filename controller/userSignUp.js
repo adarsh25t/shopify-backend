@@ -1,6 +1,6 @@
-import validator from "validator";
-import User from "../models/userModel.js"
-import bcrypt from "bcrypt";
+const validator = require('validator');
+const User = require('../models/userModel.js');
+const bcrypt = require('bcrypt');
 
 async function userSignUp(req, res) {
        
@@ -62,6 +62,4 @@ async function userSignUp(req, res) {
     }
 }
 
-export {
-    userSignUp
-}
+module.exports = userSignUp

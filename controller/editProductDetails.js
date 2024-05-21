@@ -1,4 +1,4 @@
-import Product from "../models/productModel.js";
+const Product = require('../models/productModel.js');
 
 
 // edit product
@@ -19,6 +19,4 @@ const editProduct = async (req,res) => {
     }
 }
 
-export {
-    editProduct
-}
+module.exports = editProduct
